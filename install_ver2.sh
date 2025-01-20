@@ -33,7 +33,7 @@ echo "Running Wyoming Satellite setup script..."
 # Set up autostart and widget shortcut
 cd ..
 mkdir -p ~/.termux/boot/
-wget -P ~/.termux/boot/ https://raw.githubusercontent.com/T-vK/wyoming-satellite-termux/main/wyoming-satellite-android || { echo "Failed to download Wyoming Satellite Android script"; exit 1; }
+wget -P ~/.termux/boot/ https://raw.githubusercontent.com/BadGuppy/wyoming-satellite-termux/main/wyoming-satellite-android || { echo "Failed to download Wyoming Satellite Android script"; exit 1; }
 chmod +x ~/.termux/boot/wyoming-satellite-android
 
 mkdir -p ~/.shortcuts/tasks/
