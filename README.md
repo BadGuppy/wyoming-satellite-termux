@@ -19,7 +19,9 @@ Open Termux and run:
 
 Or version 2 
 
+... Bash
 (command -v wget > /dev/null 2>&1 || (echo "Installing wget..." && pkg install -y wget)) && bash <(wget -qO- https://raw.githubusercontent.com/BadGuppy/wyoming-satellite-termux/refs/heads/main/install_ver2.sh)
+...
 
 ### How to uninstall
 
