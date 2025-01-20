@@ -33,7 +33,7 @@ if [ "$OWW_ENABLED" = "true" ]; then
     export OWW_FLAGS="--wake-uri tcp://127.0.0.1:10400 --wake-word-name ok_nabu"
     wlog "Enter wyoming-openwakeword directory..."
     cd "$HOME/wyoming-openwakeword"
-    stdbuf -oL -eL python3 ./script/run --uri 'tcp://0.0.0.0:10400' --preload-model 'ok_nabu' --debug 2>&1 | tee -a "$HOME/wyoming-satellite.log" &
+    stdbuf -oL -eL python3 ./script/run --uri 'tcp://192.168.1.22:10400' --preload-model 'ok_nabu' --debug 2>&1 | tee -a "$HOME/wyoming-satellite.log" &
 else
     export OWW_FLAGS=""
 fi
@@ -48,7 +48,7 @@ fi
 
 stdbuf -oL -eL python3 ./script/run \
 --name "$SATELLITE_NAME" \
---uri 'tcp://0.0.0.0:10700' \
+--uri 'tcp://192.168.1.22:10700' \
 --mic-command 'rec -r 16000 -c 1 -b 16 -e signed-integer -t raw --no-show-progress -' \
 --snd-command 'play -r 22050 -c 1 -b 16 -e signed-integer -t raw --no-show-progress -' \
 --awake-wav ./sounds/awake.wav \
