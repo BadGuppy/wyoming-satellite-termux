@@ -17,6 +17,10 @@ Open Termux and run:
 
 ```
 
+Or version 2 
+
+(command -v wget > /dev/null 2>&1 || (echo "Installing wget..." && pkg install -y wget)) && bash <(wget -qO- https://raw.githubusercontent.com/BadGuppy/wyoming-satellite-termux/refs/heads/main/install_ver2.sh)
+
 ### How to uninstall
 
 Open Termux and run:
@@ -24,11 +28,6 @@ Open Termux and run:
 ``` Bash
 wget -qO- https://raw.githubusercontent.com/T-vK/wyoming-satellite-termux/refs/heads/main/uninstall.sh | bash
 ```
-Or version 2 
-
-(command -v wget > /dev/null 2>&1 || (echo "Installing wget..." && pkg install -y wget)) && bash <(wget -qO- https://raw.githubusercontent.com/BadGuppy/wyoming-satellite-termux/refs/heads/main/install_ver2.sh)
-
-
 ### Integrate into HomeAssistant
 
 - Open Home Assistant go to Settings → Integrations → Add Integration → Wyoming Protocol
